@@ -40,13 +40,14 @@ export default {
 
 <template>
   <c-heading text="Tasks:" />
-  <ul class="flex flex-col gap-3">
+  <ul v-if="filteredTasks.length" class="flex flex-col gap-3">
     <single-task
       v-for="item in filteredTasks"
       :key="item.id"
       :task-id="item.id"
       :text="item.text"
       :is-done="item.isDone"
-    />
+    />``
   </ul>
+  <p v-else class="text-sm text-white">Please add your first task.</p>
 </template>
