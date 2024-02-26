@@ -1,21 +1,22 @@
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+import type { PropType } from "vue";
+
+type Size = "small" | "medium";
+
+export default defineComponent({
   props: {
     text: {
-      type: String,
+      type: String as PropType<string>,
       required: true,
     },
     size: {
-      type: String,
+      type: String as PropType<Size>,
       required: false,
       default: "medium",
-      validator: (val: string) => ["small", "medium"].includes(val),
     },
   },
-  setup(props) {
-    return {};
-  },
-};
+});
 </script>
 
 <template>

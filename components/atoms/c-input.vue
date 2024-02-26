@@ -1,16 +1,16 @@
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+import type { PropType } from "vue";
+
+export default defineComponent({
   props: {
     label: {
-      type: String,
+      type: String as PropType<string>,
       required: false,
     },
     modelValue: {},
   },
-  setup(props) {
-    return {};
-  },
-};
+});
 </script>
 
 <template>
