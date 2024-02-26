@@ -47,7 +47,7 @@ export default {
       :task-id="item.id"
       :text="item.text"
       :is-done="item.isDone"
-    />``
+    />
   </ul>
   <p v-else class="text-sm text-white">Please add your first task.</p>
 </template>
